@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "DrawView.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *fingerPainting;
+
+@property (nonatomic, strong) IBOutlet DrawView *drawView;
 
 @end
 
@@ -17,25 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-- (IBAction)paintingStarts:(id)sender {
     
 
-    
 }
-
-- (void)drawRect:(CGRect)rect
-{
-    
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

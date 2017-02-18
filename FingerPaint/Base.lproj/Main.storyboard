@@ -17,23 +17,21 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="DrawView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="sne-3c-zL0" appends="YES" id="RO0-db-OdS"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="fingerPainting" destination="sne-3c-zL0" id="FLV-KD-ew9"/>
+                        <outlet property="drawView" destination="8bC-Xf-vdC" id="KUX-J9-PhU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="sne-3c-zL0">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9nK-rI-K7Y">
                     <connections>
-                        <action selector="paintingStarts:" destination="BYZ-38-t0r" id="7xO-BW-dYP"/>
+                        <action selector="panGestureDetected:" destination="BYZ-38-t0r" id="2h6-ef-jGo"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="09K-DG-BO4"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DrawView : UIView
+
+@property (nonatomic, strong) UIBezierPath *path;
 
 
 @end
