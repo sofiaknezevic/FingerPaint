@@ -20,11 +20,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="DrawView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sX2-nz-4W7">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Jam-zn-XoV"/>
+                                    <constraint firstAttribute="height" constant="216" id="hta-pL-o38"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sX2-nz-4W7" secondAttribute="trailing" id="2ZS-bq-v8T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sX2-nz-4W7" secondAttribute="bottom" id="jk4-ht-i5s"/>
+                            <constraint firstItem="sX2-nz-4W7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lhl-vq-otS"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6oE-aO-eDW" appends="YES" id="fF0-YH-lcW"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="colorPicker" destination="sX2-nz-4W7" id="QPq-oX-EVT"/>
                         <outlet property="drawView" destination="8bC-Xf-vdC" id="KUX-J9-PhU"/>
+                        <outlet property="tapTap" destination="6oE-aO-eDW" id="l3M-fb-yQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -34,6 +53,11 @@
                         <outlet property="delegate" destination="8bC-Xf-vdC" id="09K-DG-BO4"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="6oE-aO-eDW">
+                    <connections>
+                        <action selector="tappedForColor:" destination="BYZ-38-t0r" id="H6a-Nc-sg6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

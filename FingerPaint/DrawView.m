@@ -19,6 +19,7 @@
         [self setBackgroundColor:[UIColor whiteColor]];
         
         _path = [[UIBezierPath alloc] init];
+        _lineColor = [UIColor magentaColor];
         
     }
     return self;
@@ -39,7 +40,8 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    [[UIColor magentaColor]setStroke];
+    
+    [self.lineColor setStroke];
     [self.path setLineWidth:3.0];
     [self.path stroke];
 
@@ -65,18 +67,6 @@
     [self setNeedsDisplay];
     
 }
-
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    [self setNeedsDisplay];
-//    
-//}
-//
-//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    [self touchesEnded:touches withEvent:event];
-//    
-//}
 
 
 

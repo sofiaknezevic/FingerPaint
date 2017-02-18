@@ -12,6 +12,7 @@
 @interface DrawView : UIView
 
 @property (nonatomic, strong) UIBezierPath *path;
+@property (nonatomic) UIColor *lineColor;
 
 
 @end
